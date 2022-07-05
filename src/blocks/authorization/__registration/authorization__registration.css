@@ -1,0 +1,10 @@
+.authorization__registration {
+  display: flex;
+  padding-top: 15px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 400;
+  justify-content: center;
+}

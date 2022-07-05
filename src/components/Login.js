@@ -1,15 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useValidation } from "../utils/useValidation";
 
-function Register({ onRegister }) {
-  const { values, handleChange, errors, isValid, resetForm } =
+function Login({ onLogin }) {
+  const { values, handleChange, errors, isValid, resetForm } = 
     useValidation();
 
   function handleSubmit(evt) {
     evt.preventDefault();
     const { email, password } = values;
-    onRegister(email, password);
+    onLogin(email, password);
   }
   React.useEffect(() => {
     resetForm();
@@ -18,8 +17,8 @@ function Register({ onRegister }) {
   return (
     <section className="authorization">
       <div className="authorization__container">
-        <h2 className="authorization__title">Регистрация</h2>
-          <form className="authorization__form"  onSubmit={handleSubmit}>
+        <h2 className="authorization__title">Вход</h2>
+          <form className="authorization__form" onSubmit={handleSubmit}>
             <input
               className={`authorization__input ${errors.email && "popup__input_type_error"}`}
               id="email"
@@ -35,9 +34,7 @@ function Register({ onRegister }) {
                 {errors.email ?? ""}
             </span>
             <input
-              className={`authorization__input ${
-                errors.password && "popup__input_type_error"
-              }`}
+              className={`authorization__input ${errors.password && "popup__input_type_error"}`}
               id="password"
               name="password"
               type="password"
@@ -47,24 +44,16 @@ function Register({ onRegister }) {
               required
             ></input>
             <span
-              className={`place-input-error ${errors.email && "popup__input-error"}`}>
+              className={`place-input-error ${errors.password && "popup__input-error"}`}>
                 {errors.password ?? ""}
             </span>
             <button className="authorization__button button" type="submit" disabled={!isValid}>
-              Зарегистрироваться
+              Войти
             </button>
           </form>
-          <div className="authorization__registration">
-          <p className="authorization__text">
-              Уже зарегистрированы?{" "}
-          </p>
-          <Link to="/sign-in" className="authorization__link button">
-            Войти
-          </Link>
-          </div>
       </div>
     </section>
   )
 }
 
-export default Register;
+export default Login;
