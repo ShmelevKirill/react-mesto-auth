@@ -8,3 +8,9 @@
   font-weight: 400;
   justify-content: center;
 }
+
+@media (max-width: 450px) {
+  .authorization__registration {
+    padding-top: 20px;
+  }
+}

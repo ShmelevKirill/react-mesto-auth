@@ -14,10 +14,10 @@
     }
 }
 
-
-@media (max-width: 425px) {
+@media (max-width: 440px) {
     .header {
-        max-width: 425px;
-        padding: 28px 0 31.6px;
+        padding: 28px 30px 31.6px;
     }
 }
+
+

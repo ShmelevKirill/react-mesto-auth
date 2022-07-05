@@ -7,3 +7,10 @@
   border: none;
   padding: 0 0 0 24px;
 }
+
+@media (max-width: 425px) {
+  .header__exit {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
