@@ -1,6 +1,7 @@
 import React from "react";
 
-function PopupWithForm({ title, name, buttonText, loadingButtonText, isload, isOpen, onClose, onSubmit, children }) {
+function PopupWithForm({ title, name, buttonText, loadingButtonText, 
+  isLoad, isOpen, onClose, onSubmit, children, isDisabled = false, }) {
   React.useEffect(() => {
     if (!isOpen) return;
     const handleEscClose = (e) => {
@@ -33,15 +34,16 @@ function PopupWithForm({ title, name, buttonText, loadingButtonText, isload, isO
         ></button>
         <h3 className="popup__heading">{title}</h3>
         <form className="popup__container-form"
-      name={name}
-      onSubmit={onSubmit}
+          name={name}
+          onSubmit={onSubmit}
+          noValidate
       >
           {children}
           <button
             type="submit"
-            className="popup__submit"
-          >
-            {!isload ? buttonText : loadingButtonText}
+            disabled={isDisabled}
+            className={`popup__submit ${isDisabled && "popup__submit_disabled"}`}>
+            {!isLoad ? buttonText : loadingButtonText}
           </button>
         </form>
       </div>

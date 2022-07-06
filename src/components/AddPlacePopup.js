@@ -36,7 +36,7 @@ export default function AddPlacePopup({
     >
       <input
         type="text"
-        name="title"
+        name="name"
         id="title-input"
         placeholder="Название"
         className={`popup__input popup__input_place ${errors.name && "popup__input_type_error"}`}

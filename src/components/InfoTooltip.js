@@ -10,7 +10,7 @@ function InfoTooltip({ isOpen, onClose, image, title }) {
     };
     document.addEventListener("keydown", handleEscClose);
     return () => {
-      document.removeEventListener("keydown", handleEscClose);
+    document.removeEventListener("keydown", handleEscClose);
     };
   }, [isOpen, onClose]);
 
@@ -19,7 +19,6 @@ function InfoTooltip({ isOpen, onClose, image, title }) {
       onClose();
     }
   };
-
 
   return (
     <div className={`popup popup__authorization ${isOpen && "popup_opened"}`}
