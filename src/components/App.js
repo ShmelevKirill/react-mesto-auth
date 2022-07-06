@@ -244,7 +244,7 @@ function App() {
           <Route
             path="/sign-up"
             element={<Register onRegister={handleRegister} />}
-          ></Route>
+          />
           <Route
             exact
             path="/"
@@ -261,7 +261,7 @@ function App() {
                 onCardDelete={handleDeleteCard}
               />
             }
-          ></Route>
+          />
           <Route
             path="*"
             element={
