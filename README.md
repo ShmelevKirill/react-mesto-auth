@@ -8,4 +8,4 @@
 
 **Проект**
 
-* [Ссылка на проект / Link](https://shmelevkirill.github.io/mesto/)
+* [Ссылка на проект / Link](https://shmelevkirill.github.io/react-mesto-auth/)
